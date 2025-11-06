@@ -13,5 +13,5 @@ wget -O fmtlib-12.1.0.tar.gz https://github.com/fmtlib/fmt/archive/refs/tags/12.
 tar xf fmtlib-12.1.0.tar.gz
 cd fmt-12.1.0
 cmake -DCMAKE_INSTALL_PREFIX:PATH="$third_party_build" .
-make install
+make install fmt
 cd ..

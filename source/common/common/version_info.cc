@@ -8,7 +8,7 @@
 #include "version_info.h"
 
 std::string VersionInfo::Version() {
-  return fmt::format("{}/{}", kGitSha.substr(0, 6),
+  return fmt::format("{}/{}", kGitSha.substr(0, 8),
 #ifdef NDEBUG
                      "RELEASE"
 #else

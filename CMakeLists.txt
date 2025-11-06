@@ -16,8 +16,12 @@ INCLUDE(third-party)
 
 # Setup build ID via the linker. Also, statically link GCC libraries to lock GCC version.
 EXECUTE_PROCESS(COMMAND git rev-parse --sq HEAD OUTPUT_VARIABLE GIT_COMMIT WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
-SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--build-id=0x${GIT_COMMIT} -static-libstdc++ -static-libgcc
-                            ${ONVEY_EXTRA_LINKER_FLAGS} ${CMAKE_EXE_LINKER_FLAGS}")
+IF(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--build-id=0x${GIT_COMMIT} -static-libstdc++ \
+                                -static-libgcc ${ONVEY_EXTRA_LINKER_FLAGS} ${CMAKE_EXE_LINKER_FLAGS}")
+ELSE()
+    SET(CMAKE_EXE_LINKER_FLAGS "${ONVEY_EXTRA_LINKER_FLAGS} ${CMAKE_EXE_LINKER_FLAGS}")
+ENDIF()
 
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
 INCLUDE_DIRECTORIES(${PROJECT_BINARY_DIR}/source)

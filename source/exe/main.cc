@@ -8,7 +8,7 @@
 #include "common/common/version_info.h"
 
 int main() {
-  fmt::print("version {}", VersionInfo::Version());
+  fmt::print("version {}\n", VersionInfo::Version());
   return 0;
 }
 

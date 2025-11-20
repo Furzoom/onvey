@@ -8,4 +8,4 @@
 ADD_EXECUTABLE(onvey main.cc $<TARGET_OBJECTS:onvey-common>)
 TARGET_LINK_LIBRARIES(onvey fmt)
 
-cotire(onvey)
+COTIRE(onvey)

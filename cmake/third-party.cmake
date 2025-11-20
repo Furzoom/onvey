@@ -9,3 +9,7 @@
 # https://github.com/fmtlib/fmt
 # version 12.1.0
 SET(ONVEY_FMTLIB_INCLUDE_DIR "" CACHE FILEPATH "location of fmtlib includes")
+
+# https://github.com/google/googletest
+# version 1.17.0
+SET(ONVEY_GOOGLETEST_INCLUDE_DIR "" CACHE FILEPATH "location of googletest includes")

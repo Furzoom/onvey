@@ -7,7 +7,7 @@
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ggdb3 -fno-omit-frame-pointer -Wall -Wextra -Werror")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wnon-virtual-dtor -Woverloaded-virtual -Wold-style-cast")
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wconversion -Wpointer-arith -Wshadow -Wwrite-strings")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wconversion -Wpointer-arith -Wshadow -Wwrite-strings")
 
 OPTION(ONVEY_CODE_COVERAGE "build with code coverage instrument" OFF)
 IF(ONVEY_CODE_COVERAGE)

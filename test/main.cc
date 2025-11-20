@@ -5,8 +5,10 @@
 // https://github.com/furzoom/onvey
 //
 
-#pragma once
+#include "precompiled/precompiled_test.h"
 
-#include <string>
+int main(int argc, char** argv) {
+  ::testing::InitGoogleMock(&argc, argv);
 
-#include "fmt/format.h"
+  return RUN_ALL_TESTS();
+}

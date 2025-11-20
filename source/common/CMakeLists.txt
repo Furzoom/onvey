@@ -25,4 +25,4 @@ SET_TARGET_PROPERTIES(
         "../precompiled/precompiled.h"
 )
 
-cotire(onvey-common)
+COTIRE(onvey-common)
